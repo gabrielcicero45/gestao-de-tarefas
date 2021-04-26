@@ -1,0 +1,103 @@
+
+<div class="container  w-60 mb-5">
+  <form [formGroup]="taskForm" method="POST">
+    <div class="row p-2">
+      <div class="col-12">
+        <p>Titulo:  </p>  
+          <mat-form-field appearance="outline"  class="w-75 h-50">
+          <mat-label class="label-form">Insira um título</mat-label>
+          <input formControlName="title" matInput >
+          </mat-form-field>
+          <small
+        *ngIf="taskForm?.get('title')?.errors?.required"
+        class="text-danger d-block ">
+        Este campo é obrigatorio !
+        </small>
+      </div>
+    
+  </div>
+  <div class="row  p-2">
+      <div class="col">
+         <p>Descrição:</p> 
+          <mat-form-field appearance="outline" class=" w-75">
+              <mat-label class="label-form">Insira uma descrição</mat-label>
+              <textarea formControlName="description" matInput ></textarea>
+          </mat-form-field>
+          <small
+          *ngIf="taskForm?.get('description')?.errors?.required"
+          class="text-danger d-block ">
+          Este campo é obrigatorio !
+          </small>
+      </div>
+     
+
+  </div>
+  <div class="row p-2">
+      <div class="col-6">
+         <p>Responsável:</p> 
+          <mat-form-field appearance="outline" class="w-75">
+              <mat-select>
+                <mat-option value="one">João</mat-option>
+                <mat-option value="two">Cícero</mat-option>
+                <mat-option value="three">Gabriel</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <small
+            *ngIf="taskForm?.get('responsible')?.errors?.required"
+            class="text-danger d-block ">
+            Este campo é obrigatorio !
+            </small>
+      </div>
+      
+      <div class="col-6 ">
+         <p style="margin-left: -124px;">Prioridade:</p> 
+          <mat-form-field appearance="outline" class="w-75" style="margin-left: -124px;">
+              
+              <mat-select>
+                <mat-option value="one">Alta</mat-option>
+                <mat-option value="two">Média</mat-option>
+                <mat-option value="two">Baixa</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <small
+            *ngIf="taskForm?.get('priority')?.errors?.required"
+            class="text-danger d-block ">
+            Este campo é obrigatorio !
+            </small>
+  
+      </div>
+  </div>
+  <div class="row p-2">
+      <div class="col">
+         <p>Deadline:</p> 
+          <mat-form-field appearance="outline" >
+              <mat-label>Escolha uma data</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <small
+            *ngIf="taskForm?.get('deadline')?.errors?.required"
+            class="text-danger d-block ">
+            Este campo é obrigatorio !
+            </small>
+      </div>
+      
+  </div>
+  
+  <div class="row">
+    <div class="col p-3">
+      <button type="submit" class="btn btn-primary mb-4"> Cadastrar</button>
+
+    </div>
+     
+  </div>
+ 
+   
+    
+  </form>
+    
+    
+
+</div>
+    

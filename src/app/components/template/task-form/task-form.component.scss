@@ -1,0 +1,21 @@
+::ng-deep {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+    
+        color: black!important;
+        background-color: rgba(0,0, 0,0.15)!important;
+    
+      }
+      mat-form-field{
+          .mat-hint,input, ::placeholder, .mat-form-field-label, .mat-icon-button,.mat-select-value,.mat-select-arrow{
+              color: black;
+          }
+          .title-field input .mat-form-field-infix {
+          width: 600px;
+        }
+      }
+}
+
+
+
+
+
