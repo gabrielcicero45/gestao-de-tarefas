@@ -6,14 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 
 //HTTP Modules
 import { HttpClientModule } from '@angular/common/http';
-
 import {ReactiveFormsModule} from '@angular/forms';
-
 import { CommonModule } from '@angular/common';
 
 
 import { MaterialModule } from './components/template/material/material.module';
-
 
 import { AppComponent } from './app.component';
 
@@ -44,10 +41,8 @@ import { ListFormComponent } from './components/template/list-form/list-form.com
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MaterialModule,
+    MaterialModule
     
-    
- 
  
     
   ],
